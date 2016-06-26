@@ -18,7 +18,7 @@ def main():
             logging.info("Need to mkdocs serve") 
             try:
                 data = subprocess.Popen(cmd_mkdocs_serve, shell=True, stdout=subprocess.PIPE, cwd=path).stdout.read()
-                subprocess.Popen
+                data.wait()
                 logging.info(data)
             except Exception,e:
                 logging.warn(e)
